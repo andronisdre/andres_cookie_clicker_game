@@ -5,6 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+@media only screen and (max-width: 600px) {
+        /* Styles for screens with a maximum width of 600px (typical for phones) */
+        body {
+            background-size: cover; /* Adjust background size for smaller screens */
+        }
+
+        #displayArea,
+        #clickTheCookie,
+        #cookieButton,
+        #upgradeButton,
+        .grid {
+            position: static; /* Remove fixed positioning for these elements */
+            top: auto;
+            left: auto;
+            transform: none;
+            width: auto;
+            margin: 10px; /* Add some margin for better spacing */
+        }
+
+        .cookieButton {
+            top: auto;
+            left: auto;
+            transform: none;
+        }
+    }
+    
         body {
             display: flex;
             flex-direction: column;
