@@ -18,17 +18,21 @@
         #upgradeButton,
         .grid {
             position: static; /* Remove fixed positioning for these elements */
+            grid-template-columns: repeat(3, 1fr);
             top: auto;
             left: auto;
             transform: none;
             width: auto;
-            margin: 1px; /* Add some margin for better spacing */
+            margin: 5px; /* Add some margin for better spacing */
         }
 
         .cookieButton {
             top: auto;
             left: auto;
             transform: none;
+        }
+        .buyButton {
+            padding: 5px;
         }
     }
     
@@ -55,7 +59,7 @@
     
         #clickTheCookie {
             position: fixed;
-            bottom: 250px;
+            bottom: 25px;
             color: rgb(0, 0, 0); /* Text color */
             font-size: 36px;
             user-select: none; /* Prevent text selection */
