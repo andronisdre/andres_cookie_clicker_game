@@ -1,0 +1,153 @@
+@media only screen and (max-width: 300px) {
+        /* Styles for screens with a maximum width of 300px (typical for phones) */
+        body {
+            background-size: cover; /* Adjust background size for smaller screens */
+        }
+
+        .grid {
+            position: static; /* Remove fixed positioning for these elements */
+            grid-template-columns: repeat(3, 1fr);
+            top: auto;
+            left: auto;
+            transform: none;
+            width: auto;
+            margin: 5px; /* Add some margin for better spacing */
+        }
+
+        .cookieButton {
+            top: auto;
+            left: auto;
+            transform: none;
+        }
+        .buyButton {
+            padding: 5px;
+        }
+    }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-image: url('texture_cookie_game/background.jpg');
+            background-size: 100% 100%;
+        }
+    
+        #displayArea {
+            font-size: 24px;
+            margin-bottom: 20px;
+            position: fixed;
+            top: 20px;
+            color: rgb(0, 0, 0); /* Text color */
+            user-select: none; /* Prevent text selection */
+        }
+    
+        #clickTheCookie {
+            position: fixed;
+            bottom: 25px;
+            color: rgb(0, 0, 0); /* Text color */
+            font-size: 36px;
+            user-select: none; /* Prevent text selection */
+        }
+
+        /* Style for the "Max" button */
+.maxButton {
+    padding: 10px;
+    border: 2px solid #808080; /* Grey border for a disabled look */
+    border-radius: 10px;
+    background-color: #d3d3d3; /* Grey background color */
+    color: #808080; /* Grey text color */
+    user-select: none; /* Prevent text selection */
+}
+    
+        .cookieButton {
+            width: 120px;
+            height: 120px;
+            top: 100px;
+            border: none; /* Remove explicit border */
+            border-radius: 50%; /* Adjust this value to match your cookie image */
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            transform: scale(1); /* Initialize transform property */
+            color: white; /* Text color */
+            background-image: url('texture_cookie_game/cookie1.jpg'); /* Replace with your image path */
+            background-size: 150% 150%;
+            background-position: center;
+            transition: transform 0.1s ease-in-out; /* Add transition for smoother animation */
+            transform-origin: center; /* Set transform origin to center for scaling in place */
+        }
+    
+        .cookieButton:active {
+            transform: scale(1.1); /* Scale up the button when active (clicked) */
+        }
+    
+        .buyButton {
+            padding: 10px;
+            border: 2px solid #2E8B57;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green by default when buyable */
+            color: white; /* Text color */
+            user-select: none; /* Prevent text selection for button texts */
+        }
+    
+        .buyButton.bought {
+            display: none; /* Hide the button when it's bought */
+        }
+    
+        .buyButton.notBuyable {
+            background-color: #8B0000; /* Dark red when not buyable */
+            border-color: #8B0000; /* Red border when not buyable */
+        }
+    
+        /* Adjust the grid dimensions and gap as needed */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin: 20px; /* Adjust the margin to add space between the edges and buttons */
+            position: absolute; /* Change from fixed to absolute */
+            top: 50%; /* Adjust the top position as needed */
+        }
+    
+        /* Notification style */
+        .notification {
+            position: absolute;
+            font-size: 24px;
+            color: white;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+            user-select: none; /* Prevent text selection for notification messages */
+        }
+    
+        #upgradeButton {
+            position: fixed;
+            top: 40%; /* Adjust the distance from the bottom */
+            left: 50%; /* Adjust the distance from the left */
+            transform: translateX(-50%); /* Adjust the position to center the button */
+        }
+        #soundControl {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            user-select: none; /* Prevent text selection */
+        }
+
+        #muteButton,
+        #unmuteButton {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            display: flex;
+            align-items: center;
+            user-select: none; /* Prevent text selection */
+        }
