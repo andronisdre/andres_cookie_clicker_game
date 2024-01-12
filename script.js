@@ -387,5 +387,23 @@
         document.body.appendChild(soundControl);
     
         function formatNumber(number) {
-            return number.toLocaleString();
+            if (number >= 1e15) {
+                // Display in quadrillions
+                return (number / 1e15).toFixed(2) + "Q";
+            } else if (number >= 1e12) {
+                // Display in trillions
+                return (number / 1e12).toFixed(2) + "T";
+            } else if (number >= 1e9) {
+                // Display in billions
+                return (number / 1e9).toFixed(2) + "B";
+            }
+             else if (number >= 1e6) {
+                // Display in millions
+                return (number / 1e6).toFixed(2) + "M";
+            } else if (number >= 1e3) {
+                // Display in thousands
+                return (number / 1e3).toFixed(2) + "K";
+            } else {
+                return number.toLocaleString();
+            }
         }
