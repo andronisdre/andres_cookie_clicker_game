@@ -21,7 +21,7 @@
     
         #clickTheCookie {
             position: fixed;
-            bottom: 15px;
+            top: 250px;
             color: rgb(0, 0, 0); /* Text color */
             font-size: 36px;
             user-select: none; /* Prevent text selection */
@@ -68,6 +68,7 @@
             color: white; /* Text color */
             user-select: none; /* Prevent text selection for button texts */
             font-size: 12px;
+            transform: scale(auto);
         }
     
         .buyButton.bought {
@@ -78,16 +79,43 @@
             background-color: #8B0000; /* Dark red when not buyable */
             border-color: #8B0000; /* Red border when not buyable */
         }
+
+        
     
         /* Adjust the grid dimensions and gap as needed */
         .grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
+            /*grid-template-columns: repeat(auto-fit, minmax(min(100px, 25%), 1fr));*/
             gap: 15px;
             justify-content: center;
             margin: 20px; /* Adjust the margin to add space between the edges and buttons */
             position: absolute; /* Change from fixed to absolute */
             top: 50%; /* Adjust the top position as needed */
+            width: 95%;
+        }
+
+        @media (max-width: 850px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+            }
+            .buyButton {
+                padding: 3px;  
+                font-size: 10px;
+            }
+            .cookieButton {
+                top: 75px;
+                width: 60px;
+                height: 60px;
+            }
+            #clickTheCookie {
+                top: 150px;
+                font-size: 18px;
+            }
+            #displayArea {
+                font-size: 12px;
+            }
         }
     
         /* Notification style */
