@@ -361,11 +361,7 @@
         // Create sound control buttons
         var soundControl = document.createElement("div");
         soundControl.id = "soundControl";
-        soundControl.style.position = "fixed";
-        soundControl.style.top = "20px";
-        soundControl.style.right = "20px";
-        soundControl.style.display = "flex";
-        soundControl.style.gap = "10px";
+        
     
         var musicToggle = document.createElement("button");
         musicToggle.id = "musicToggle";
