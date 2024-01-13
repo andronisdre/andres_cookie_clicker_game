@@ -92,7 +92,7 @@
             margin: 20px; /* Adjust the margin to add space between the edges and buttons */
             position: absolute; /* Change from fixed to absolute */
             top: 50%; /* Adjust the top position as needed */
-            width: 95%;
+            width: 96%;
         }
 
         @media (max-width: 850px) {
