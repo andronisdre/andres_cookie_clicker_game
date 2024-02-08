@@ -1,0 +1,1 @@
+An older version of the cookie clicker game. Most of the functions that exist in the newest version also exist in this code, but there are no login functions since it isnt tied to a database unlike the newer version.
